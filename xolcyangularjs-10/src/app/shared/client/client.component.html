@@ -1,0 +1,39 @@
+<!--what client says -->
+<section class="section" id="review">
+    <div class="container">
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-8 text-center">
+                <h2 class="fs-3 fw-medium lh-1 text-dark mb-3">{{heading}}</h2>
+                <p class="text-muted">{{content}}</p>
+            </div>
+        </div>
+        <!-- end row -->
+        <div class="row">
+            <div class="col-12 mt-4 pt-2">
+                <div class="client-slider-one">
+                    <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
+                        <ng-template carouselSlide *ngFor='let value of contentData'>
+                            <div class="border client-box">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-4 align-middle border-end name-box client-icon">
+                                        <i-feather name="{{value.icon}}" class="icon-lg sw-1 text-primary mt-3">
+                                        </i-feather>
+                                        <h5 class="text-dark fs-18 text-truncate mt-4">{{value.title}}</h5>
+                                        <p class="text-muted mb-3">{{value.sub_title}}</p>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p class="text-muted ps-lg-3">
+                                            {{value.content}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </owl-carousel-o>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end container -->
+</section>
+<!-- end what client says -->

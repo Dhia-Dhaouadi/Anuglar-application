@@ -1,0 +1,75 @@
+<!-- our pricing  -->
+<section class="section" id="pricing">
+    <div class="container">
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-8 text-center">
+                <h2 class="fs-3 fw-medium lh-1 text-dark mb-3">{{heading}}</h2>
+                <p class="text-muted">
+                    {{content}}
+                </p>
+            </div>
+        </div>
+        <!-- end row -->
+        <div class="row">
+            <div *ngFor="let value of pricingList" class="col-lg-4 col-md-6 mt-4 pt-2">
+                <div class="price-box border rounded bg-white p-5">
+                    <h4 class="fw-normal text-dark mb-2">{{value.title}}</h4>
+                    <p class="text-muted fs-14">{{value.content}}</p>
+                    <div class="mt-4 pt-2">
+                        <p class="text-dark"><span class="fs-22 me-1 align-middle text-primary icon">▹</span>Online
+                            Space : {{value.space}}MB</p>
+                        <p class="text-dark my-1"><span
+                                class="fs-22 me-1 align-middle text-primary icon">▹</span>Bandwidth : {{value.width}}GB
+                        </p>
+                        <p class="text-dark"><span class="fs-22 me-1 align-middle text-primary icon">▹</span>Support :
+                            {{value.support}}</p>
+                    </div>
+                    <h5 class="fw-semibold my-4 py-2"><sup>$</sup>{{value.price}} <span class="fw-normal fs-14">Per
+                            Month</span></h5>
+                    <a [ngxScrollTo]="'#home'" href="javascript: void(0);" class="text-primary fw-medium">
+                        Choose Plan
+                        <span class="fs-22 ms-1 align-middle icon">⇾</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- end our-pricing -->
+
+<!-- brand-logo -->
+<section class="brand-section">
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let value of brandLogos" class="col-md-3 col-6 my-4">
+                <img class="img-fluid mx-auto brand-logo" src="{{value.image}}" alt="" />
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end-container -->
+</section>
+<!-- end brand logo -->
+
+
+<!-- start cta -->
+<section class="section bg-light"
+    style="background: url(assets/layout/images/contact-bg.png); background-repeat: no-repeat; background-size: cover;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="text-dark mb-4">{{performance_title}}</h2>
+                <p class="text-muted">{{performance_content}}</p>
+                <div class="mt-4">
+                    <a [ngxScrollTo]="'#home'" href="javascript: void(0);" class="btn btn-primary">Choose Plan <span
+                            class="fs-22 ms-1 lh-1 align-middle icon">⇾</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- end cta -->
